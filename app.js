@@ -16,6 +16,8 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
+
+	// serve public directory as static files.  Deploy to S3?
   app.use(express.static(__dirname + '/public'));
 });
 
